@@ -12,18 +12,6 @@ import org.springframework.web.client.RestClientException;
 public class ConsumerApplication {
 
 	public static void main(String[] args) throws RestClientException, IOException {
-		ApplicationContext ac=SpringApplication.run(ConsumerApplication.class, args);
-		
-		ConsumerClient ci=(ConsumerClient) ac.getBean(ConsumerClient.class);
-		ci.getEmp();
-	}
 
-	@Bean
-	public ConsumerClient getConsumerClient()
-	{
-		return new ConsumerClient();
 	}
-	
-	
-	
 }
